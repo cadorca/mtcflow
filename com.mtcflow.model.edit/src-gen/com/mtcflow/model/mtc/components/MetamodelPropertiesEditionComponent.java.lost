@@ -1,0 +1,18 @@
+
+Sat Jan 25 23:21:18 COT 2014
+================================================================================
+Start of user code for technology editor initialization
+				java.util.Collection<Object> inputTechnology = new ArrayList<Object>(3);
+				inputTechnology.add("one");
+				inputTechnology.add("two");
+				inputTechnology.add("three");
+				// End of user code
+
+Sun Feb 09 19:18:35 COT 2014
+================================================================================
+Start of user code for URI editor initialization
+				java.util.Collection<Object> inputURI = new ArrayList<Object>(3);
+				inputURI.add("one");
+				inputURI.add("two");
+				inputURI.add("three");
+				// End of user code

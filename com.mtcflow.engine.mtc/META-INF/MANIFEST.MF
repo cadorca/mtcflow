@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.mtcflow.engine.mtc
+Bundle-SymbolicName: com.mtcflow.engine.mtc;singleton:=true
+Bundle-Version: 1.2.0.qualifier
+Bundle-Vendor: MTCFLOW
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ com.mtcflow.engine;visibility:=reexport,
+ com.mtcflow.model;visibility:=reexport,
+ com.mtcflow.engine.core;visibility:=reexport
+Export-Package: com.mtcflow.engine.mtc
+Bundle-ClassPath: .,
+ lib/commons-io-2.4.jar

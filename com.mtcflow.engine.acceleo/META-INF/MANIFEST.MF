@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.mtcflow.engine.acceleo
+Bundle-SymbolicName: com.mtcflow.engine.acceleo;singleton:=true
+Bundle-Version: 1.2.0.qualifier
+Bundle-Vendor: MTCFLOW
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.mtcflow.engine;visibility:=reexport,
+ com.mtcflow.model;visibility:=reexport,
+ org.eclipse.acceleo.engine;visibility:=reexport,
+ org.eclipse.acceleo.parser;visibility:=reexport,
+ com.google.guava;visibility:=reexport
+Export-Package: com.mtcflow.engine.acceleo

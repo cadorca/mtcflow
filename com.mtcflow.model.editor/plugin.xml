@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Transformation -->
+      <wizard
+            id="com.mtcflow.model.mtc.presentation.MtcModelWizardID"
+            name="%_UI_MtcModelWizard_label"
+            class="com.mtcflow.model.mtc.presentation.MtcModelWizard"
+            category="com.mtcflow.wizard.categoryID"
+            icon="icons/chain.png">
+         <description>%_UI_MtcModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Transformation -->
+      <editor
+            id="com.mtcflow.model.mtc.presentation.MtcEditorID"
+            name="%_UI_MtcEditor_label"
+            icon="icons/chain.png"
+            extensions="mtc"
+            class="com.mtcflow.model.mtc.presentation.MtcEditor"
+            contributorClass="com.mtcflow.model.mtc.presentation.MtcActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

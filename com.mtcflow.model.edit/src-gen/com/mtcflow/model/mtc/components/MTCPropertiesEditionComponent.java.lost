@@ -1,0 +1,21 @@
+
+Wed Jan 08 23:56:57 COT 2014
+================================================================================
+Start of user code for HOTechnology editor initialization
+				java.util.Collection<Object> inputHOTechnology = new ArrayList<Object>(3);
+				inputHOTechnology.add("one");
+				inputHOTechnology.add("two");
+				inputHOTechnology.add("three");
+				// End of user code
+Start of user code for M2TTechnology editor initialization
+				java.util.Collection<Object> inputM2TTechnology = new ArrayList<Object>(3);
+				inputM2TTechnology.add("one");
+				inputM2TTechnology.add("two");
+				inputM2TTechnology.add("three");
+				// End of user code
+Start of user code for M2MTechnology editor initialization
+				java.util.Collection<Object> inputM2MTechnology = new ArrayList<Object>(3);
+				inputM2MTechnology.add("one");
+				inputM2MTechnology.add("two");
+				inputM2MTechnology.add("three");
+				// End of user code

@@ -1,0 +1,259 @@
+-- Set text of transitionLabel to empty string
+for (figure in GmfGraph!CustomFigure.all){
+var centerLayout = new GmfGraph!GridLayout;
+	figure.layout = centerLayout;
+}
+
+--for (figure in GmfGraph!RoundedRectangle.all){
+--var centerLayout = new GmfGraph!CenterLayout;
+--	figure.layout = centerLayout;
+--}
+-- Add bold font to actionLabel
+
+-- Add italic font to actionLabel
+-- Add bold font to actionLabel
+fixLabels();
+
+-- Find the compartment figure
+--var configurationAttributesCompartmentFigure = GmfGraph!Rectangle.all.
+--    selectOne(r|r.name = 'ConfigurationVariablesCompartmentFigure');
+    -- ... and add a stack layout to it
+--configurationAttributesCompartmentFigure.layout = new GmfGraph!StackLayout;
+cleanAttribute(GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'LibraryFigure'));
+cleanAttribute(GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'VariableFigure'));
+cleanAttribute(GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'TagFigure'));
+cleanAttribute(GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'ScriptFigure'));
+cleanAttribute(GmfGraph!RoundedRectangle.all.selectOne(r|r.name = 'ModelEnvironmentFigure'));
+
+var toolRegistry=GmfTool!ToolRegistry.all.selectOne(r|true);
+var palette=toolRegistry.palette;
+
+--Fix palette groups
+var transformationGroup=GmfTool!ToolGroup.all.selectOne(r|r.title='Objects');
+transformationGroup.title='Transformations';
+
+-- Objects Group
+palette.tools.add(new GmfTool!ToolGroup);
+var objectGroup = palette.tools.last();
+objectGroup.title='Artifacts';
+objectGroup.collapsible=true;
+for (tool in transformationGroup.tools.clone()) {
+	if(tool.title = 'Model' or tool.title = 'Metamodel' or tool.title = 'File' or tool.title='Referenced Resource'){
+	  objectGroup.tools.add(tool);
+	} 
+}
+
+-- Configuration Group
+palette.tools.add(new GmfTool!ToolGroup);
+var objectGroup = palette.tools.last();
+objectGroup.title='Configuration';
+objectGroup.collapsible=true;
+for (tool in transformationGroup.tools.clone()) {
+	if(tool.title = 'MTC Configuration' or tool.title = 'Variable' or tool.title = 'Tag' or tool.title = 'Library' or tool.title = 'Script' or tool.title = 'ModelEnvironment'){
+	  objectGroup.tools.add(tool);
+	} 
+}
+
+-- Validation Group
+palette.tools.add(new GmfTool!ToolGroup);
+var objectGroup = palette.tools.last();
+objectGroup.title='Validation';
+objectGroup.collapsible=true;
+for (tool in transformationGroup.tools.clone()) {
+	if(tool.title = 'Validation' ){
+	  objectGroup.tools.add(tool);
+	} 
+}
+
+addIconToFigure('ModelFigure','ModelIcon');
+addIconToFigure('MetamodelFigure','MetamodelIcon');
+addIconToFigure('FileFigure','FileIcon');
+addIconToFigure('ReferencedResourceFigure','RefResourceIcon');
+addIconToFigure('ValidationFigure','ValidationIcon');
+
+--Delete connections tool group 
+--var connectionToolGroup = GmfTool!ToolGroup.all.selectOne(t|t.title = 'Connections');
+--for (contool in connectionToolGroup.tools.clone()) { 
+--var linkMapping = GmfMap!LinkMapping.all.selectOne(nm|nm.tool = contool);
+--delete contool;
+--linkMapping.unset('tool');	
+--}
+
+--delete connectionToolGroup;
+
+operation Any unset(feature:String) {
+var sf = self.eClass().eAllStructuralFeatures.selectOne(sf|sf.name = feature);
+self.eUnset(sf);
+}
+
+operation newDimension(width:Integer,height:Integer) : GmfGraph!Dimension {
+	var dimension = new GmfGraph!Dimension;
+    dimension.dx = width;
+    dimension.dy = height;
+    dimension.println();
+    return  dimension;
+}
+
+operation fixLabels() {
+ for (actionLabel in GmfGraph!Label.all) {
+  actionLabel.name.println("Fixing label:");
+  actionLabel.font = new GmfGraph!BasicFont;
+  if(actionLabel.name='FileLabelFigure' or actionLabel.name='MetamodelLabelFigure' or actionLabel.name='ModelLabelFigure' or actionLabel.name='ReferencedResourceLabelFigure'  or actionLabel.name='ValidationLabelFigure'){
+  	actionLabel.font.height = 9;
+  } else {
+    actionLabel.font.height = 12;  
+  }
+  actionLabel.font.faceName = 'Arial';
+  actionLabel.layoutData = new GmfGraph!GridLayoutData;
+  actionLabel.layoutData.grabExcessHorizontalSpace = true;
+  actionLabel.layoutData.grabExcessVerticalSpace = true; 
+  if(actionLabel.name='M2MTransformationLabelFigure'){
+    fixTransformationFigure('M2MTransformationFigure', 'M2MFigure');
+  } else if(actionLabel.name='M2TTransformationLabelFigure'){
+    fixTransformationFigure('M2TTransformationFigure', 'M2TFigure');
+  } else if(actionLabel.name='T2MTransformationLabelFigure'){
+    fixTransformationFigure('T2MTransformationFigure', 'T2MFigure');
+  } else if(actionLabel.name='HOTransformationLabelFigure'){
+    fixTransformationFigure('HOTransformationFigure', 'HOTFigure');
+  } else if(actionLabel.name='MTCTransformationLabelFigure'){
+    fixTransformationFigure('MTCTransformationFigure', 'MTCFigure');
+  }
+  if(not actionLabel.name.isArtifact()){
+   actionLabel.layoutData.horizontalAlignment = GmfGraph!Alignment#BEGINNING;
+   actionLabel.layoutData.verticalAlignment = GmfGraph!Alignment#CENTER;
+   var inset = new GmfGraph!Insets;
+   inset.left = 1;
+   inset.right = 5;
+   actionLabel.insets = inset;
+   //actionLabel.layoutData.horizontalIndent = 35;
+  }else{
+   var inset = new GmfGraph!Insets;
+   inset.left = 1;
+   inset.right = 1;
+   inset.top = 1;
+   inset.bottom = 1;
+   actionLabel.insets = inset;
+   actionLabel.layoutData.verticalAlignment = GmfGraph!Alignment#CENTER;
+   actionLabel.layoutData.horizontalAlignment = GmfGraph!Alignment#CENTER;  
+  }
+  -- and add a preferred size to it
+  --actionLabel.eContainer.name.println("El nombre es:");
+  var preferredSizeDefined=false;
+  for (eat in actionLabel.eContainer.eClass.getEAllReferences()) { 
+	preferredSizeDefined=(eat.name='preferredSize');
+	if(preferredSizeDefined){
+	 preferredSizeDefined.println();
+	 break; 
+	}
+ }
+  if(preferredSizeDefined){
+  if(actionLabel.eContainer.preferredSize.isDefined()){
+    var preferredSize = actionLabel.eContainer.preferredSize;
+    actionLabel.preferredSize = newDimension(preferredSize.dx,preferredSize.dy);
+    actionLabel.maximumSize = newDimension(preferredSize.dx,preferredSize.dy);
+    --actionLabel.eContainer.minimumSize = newDimension(preferredSize.dx,preferredSize.dy);
+    if(actionLabel.name.isArtifact()){
+      actionLabel.eContainer.maximumSize = newDimension(preferredSize.dx,preferredSize.dy);
+    }
+    var ca = new GmfGraph!CustomAttribute;
+    ca.name='textWrap';
+    ca.value='true';
+    actionLabel.attributes.add(ca);
+    var caAligment = new GmfGraph!CustomAttribute;
+    caAligment.name='alignment';
+    caAligment.value='org.eclipse.draw2d.PositionConstants.WEST';
+    actionLabel.attributes.add(caAligment);
+   }
+  }
+ }
+ // Fix label prositions on links
+for (actionLabel in GmfGraph!DiagramLabel.all) {
+ // the links labels dont have  accessor
+ if(actionLabel.accessor.isUndefined()){
+  --<facets xsi:type="gmfgraph:AlignmentFacet" alignment="END"/>
+  --<facets xsi:type="gmfgraph:LabelOffsetFacet" x="1" y="1"/>
+  var al = new GmfGraph!AlignmentFacet;
+  al.alignment=GmfGraph!Alignment#BEGINNING;
+  actionLabel.facets.add(al);
+  actionLabel = actionLabel.figure.actualFigure;
+  actionLabel.println();
+  actionLabel.font = new GmfGraph!BasicFont;
+  actionLabel.font.height = 10;
+  actionLabel.font.style = GmfGraph!FontStyle#BOLD;
+  actionLabel.font.faceName = 'Arial';
+  
+  
+  --var offset = new GmfGraph!LabelOffsetFacet;
+  --offset.x=5;
+  --offset.y=5;
+  --actionLabel.facets.add(offset);
+  }
+}
+}
+
+operation cleanAttribute(figure: GmfGraph!RoundedRectangle){
+-- delete its border
+delete figure.border;
+-- set its outline to false
+figure.outline = false;
+-- and add a preferred size to it
+var preferredSize = new GmfGraph!Dimension;
+preferredSize.dx = 100;
+preferredSize.dy = 16;
+figure.preferredSize = preferredSize;
+}
+
+
+//Add custom figure to the model
+function addIconToFigure(figureName, figureClassName){
+ var modelFigure = GmfGraph!Canvas.all.first().figures.descriptors.first().selectOne(s|s.name=figureName).actualFigure;
+ var icon = new GmfGraph!CustomFigure;
+ icon.name=figureName+'Icon';
+ icon.qualifiedClassName='com.mtcflow.designer.diagram.figures.'+figureClassName;
+ modelFigure.children.add(icon);
+ modelFigure.children = modelFigure.children.invert();
+ // add Gear to transformation
+ if("transformation".isSubstringOf(figureName.toLowerCase())){
+ var gearIcon = new GmfGraph!CustomFigure;
+ gearIcon.name=figureName+'GearIcon';
+ gearIcon.qualifiedClassName='com.mtcflow.designer.diagram.figures.GearFigure';
+ modelFigure.children.add(gearIcon);
+ var iconLayoutData = new GmfGraph!GridLayoutData;
+ iconLayoutData.verticalAlignment = GmfGraph!Alignment#BEGINNING;
+ iconLayoutData.horizontalAlignment = GmfGraph!Alignment#END;  
+ gearIcon.layoutData = iconLayoutData;
+ }else{
+ delete modelFigure.border;
+ var iconLayoutData = new GmfGraph!GridLayoutData;
+ iconLayoutData.verticalAlignment = GmfGraph!Alignment#BEGINNING;
+ iconLayoutData.horizontalAlignment = GmfGraph!Alignment#CENTER;  
+ icon.layoutData = iconLayoutData;
+ var gLayout = new GmfGraph!GridLayout;
+ gLayout.numColumns = 1;
+ gLayout.equalWidth = false;
+ modelFigure.layout = gLayout;
+ }
+ return icon;
+}
+
+function fixTransformationFigure(figureName, figureIcon){
+    figureName.println();
+    var gLayout = new GmfGraph!GridLayout;
+    gLayout.numColumns = 3;
+    gLayout.equalWidth = false;
+    var figure = GmfGraph!RoundedRectangle.all->selectOne(r|r.name=figureName);
+    figure.layout = gLayout;
+    delete figure.border;
+    figure.cornerWidth = 0;
+    figure.cornerHeight = 0;
+    var iconFigure = addIconToFigure(figureName, figureIcon); 
+    var iconLayoutData = new GmfGraph!GridLayoutData;
+    iconLayoutData.verticalAlignment = GmfGraph!Alignment#CENTER;
+    iconLayoutData.horizontalAlignment = GmfGraph!Alignment#BEGINNING;  
+    iconFigure.layoutData = iconLayoutData;
+}
+
+function String isArtifact() : Boolean{
+  return self='ModelLabelFigure' or self='FileLabelFigure' or self='MetamodelLabelFigure' or self='ReferencedResourceLabelFigure';
+}
+

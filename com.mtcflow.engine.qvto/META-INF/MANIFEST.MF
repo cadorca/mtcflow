@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Qvto
+Bundle-SymbolicName: com.mtcflow.engine.qvto;singleton:=true
+Bundle-Version: 1.2.0.qualifier
+Bundle-Vendor: MTCFLOW
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.mtcflow.engine;visibility:=reexport,
+ com.mtcflow.model;visibility:=reexport,
+ org.eclipse.m2m.qvt.oml;visibility:=reexport,
+ org.eclipse.m2m.qvt.oml.common;visibility:=reexport,
+ org.eclipse.m2m.qvt.oml.emf.util;visibility:=reexport
+Export-Package: com.mtcflow.engine.qvto

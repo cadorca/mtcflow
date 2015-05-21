@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.mtcflow.engine.atl
+Bundle-SymbolicName: com.mtcflow.engine.atl;singleton:=true
+Bundle-Version: 1.2.0.qualifier
+Bundle-Vendor: MTCFLOW
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.m2m.atl.core;visibility:=reexport,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.m2m.atl.core.emf;visibility:=reexport,
+ org.eclipse.m2m.atl.engine.emfvm.launch;visibility:=reexport,
+ com.mtcflow.engine;visibility:=reexport,
+ com.mtcflow.model;visibility:=reexport,
+ org.eclipse.m2m.atl.engine;visibility:=reexport,
+ org.eclipse.m2m.atl.dsls;visibility:=reexport
+Export-Package: com.mtcflow.engine.atl

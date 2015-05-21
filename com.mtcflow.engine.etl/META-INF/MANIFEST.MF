@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Etl
+Bundle-SymbolicName: com.mtcflow.engine.etl;singleton:=true
+Bundle-Version: 1.2.0.qualifier
+Bundle-Vendor: MTCFLOW
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.mtcflow.engine;visibility:=reexport,
+ com.mtcflow.model;visibility:=reexport,
+ org.eclipse.epsilon.etl.engine;bundle-version="1.0.0";visibility:=reexport,
+ org.eclipse.epsilon.erl.engine;bundle-version="1.0.0";visibility:=reexport,
+ com.mtcflow.engine.epsilon;bundle-version="1.0.0";visibility:=reexport
+Export-Package: com.mtcflow.engine.etl

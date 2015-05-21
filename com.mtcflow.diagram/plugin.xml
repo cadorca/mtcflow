@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="com.mtcflow.diagram.Activator" id="com.mtcflow.diagram" name="MTC">
+    </component>
+  </extension>
+  <extension
+        point="org.eclipse.ui.editors">
+     <editor
+           default="true"
+           extensions="mtcd"
+           icon="icons/chain_diagram.png"
+           id="com.mtcflow.diagram.editors.XMLEditor"
+           launcher="com.mtcflow.diagram.editor.DiagramLauncher"
+           name="MTC Diagram Editor">
+     </editor>
+  </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="com.mtcflow.diagram.OpenUtils"
+           id="com.mtcflow.diagram.openActions">
+     </javaActions>
+  </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="com.mtcflow.diagram.ExecutionUtils"
+           id="com.mtcflow.diagram.executeActions">
+     </javaActions>
+  </extension>
+  <extension
+        point="org.eclipse.sirius.diagram.ui.styleConfigurationProvider">
+     <styleConfigurationProvider
+           providerClass="com.mtcflow.diagram.StyleConfigurationProvider">
+     </styleConfigurationProvider>
+  </extension>
+</plugin>

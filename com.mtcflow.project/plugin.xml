@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+<extension point="org.eclipse.debug.core.launchConfigurationTypes">
+    <launchConfigurationType
+        name="Model Transformation Chain (MTC)"
+        delegate="com.mtcflow.project.launching.MTCLaunch"
+        modes="run, debug"               
+        id="com.mtcflow.project.launching.MTCLaunchConfiguration">        
+    </launchConfigurationType>
+</extension> 
+<extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+    <launchConfigurationTypeImage
+        icon="img/chain.png"
+        configTypeID="com.mtcflow.project.launching.MTCLaunchConfiguration"
+        id="com.mtcflow.project.ui.MTCaunchConfigurationTypeImage.mtc">
+    </launchConfigurationTypeImage>
+</extension>
+<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+    <launchConfigurationTabGroup
+        type="com.mtcflow.project.launching.MTCLaunchConfiguration"
+        class="com.mtcflow.project.launching.MTCLaunchTabGroup"
+        id="com.mtcflow.project.ui.launchConfigurationTabGroups">
+    </launchConfigurationTabGroup>
+</extension>
+<extension
+     point = "org.eclipse.ui.propertyPages">
+         <page
+               class="com.mtcflow.project.ui.menu.properties.MTCProjectConfigurationPage"
+               icon="img/chain.png"
+               id="com.mtcflow.project.PropertyPage"
+               name="MTC Configuracion Page"
+               nameFilter="*">
+            <filter
+                  name="nature"
+                  value="com.mtcflow.project.eclipse.MTCNature">
+            </filter>
+         </page>
+  </extension>
+   <extension
+         id="com.mtcflow.project.eclipse.mtcbuilder"
+         name="MTC Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true"
+            isConfigurable="true">
+         <run
+               class="com.mtcflow.project.builder.MTCBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="com.mtcflow.project.eclipse.MTCNature"
+         name="MTC Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="com.mtcflow.project.nature.MTCNature">
+         </run>
+      </runtime>
+      <builder
+            id="com.mtcflow.project.eclipse.mtcbuilder">
+      </builder>
+   </extension>
+  
+   <extension
+         id="xmlProblem"
+         name="XML Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="com.mtcflow.wizard.categoryID"
+            name="Model Transformation Chain (MTC)">
+      </category>
+      <wizard
+            category="com.mtcflow.wizard.categoryID"
+            class="com.mtcflow.project.wizard.NewMTCProjectWizard"
+            icon="img/chain_icon.png"
+            id="MTCProject.projectCreationWizard"
+            name="MTC Project"
+            project="true">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="img/chain_icon_nature.png"
+            id="MTCProject.image"
+            natureId="com.mtcflow.project.eclipse.MTCNature">
+      </image>
+   </extension>
+     <extension point="org.eclipse.ui.menus">
+    <menuContribution locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+      <menu
+            icon="img/chain_icon_nature.png"
+            label="MTC">
+         <command
+               commandId="mtc.transformation.run.command"
+               label="Run MTC"
+               style="push">
+            <visibleWhen>
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false">
+                     <and>
+                        <instanceof
+                              value="org.eclipse.core.resources.IResource">
+                        </instanceof>
+                        <or>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtc">
+                           </test>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtcd">
+                           </test>
+                        </or>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="mtc.transformation.run.tags.command"
+               label="Run MTC with Tags"
+               style="push">
+            <visibleWhen>
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false">
+                     <and>
+                        <instanceof
+                              value="org.eclipse.core.resources.IResource">
+                        </instanceof>
+                        <or>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtc">
+                           </test>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtcd">
+                           </test>
+                        </or>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <menu
+               label="Run MTC from Transformation">
+            <dynamic
+                  class="com.mtcflow.project.ui.menu.StartFromTransformationMenu"
+                  id="com.mtcflow.project.eclipse.plugin.dynamic1">
+            </dynamic>
+            <visibleWhen>
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false">
+                     <and>
+                        <instanceof
+                              value="org.eclipse.core.resources.IResource">
+                        </instanceof>
+                        <or>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtc">
+                           </test>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtcd">
+                           </test>
+                        </or>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </menu>
+         <menu
+               label="Run MTC from Model">
+            <dynamic
+                  class="com.mtcflow.project.ui.menu.StartFromModelMenu"
+                  id="com.mtcflow.project.eclipse.plugin.dynamicMenuModel">
+            </dynamic>
+            <visibleWhen>
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false">
+                     <and>
+                        <instanceof
+                              value="org.eclipse.core.resources.IResource">
+                        </instanceof>
+                        <or>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtc">
+                           </test>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtcd">
+                           </test>
+                        </or>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </menu>
+         <command
+               commandId="mtc.transformation.gen.diagram"
+               label="Create MTC Diagram"
+               style="push">
+            <visibleWhen>
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false">
+                     <and>
+                        <instanceof
+                              value="org.eclipse.core.resources.IResource">
+                        </instanceof>
+                        <or>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtc">
+                           </test>
+                        </or>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="mtc.transformation.create.command"
+               style="push">
+            <visibleWhen>
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false">
+                     <and>
+                        <instanceof
+                              value="org.eclipse.core.resources.IResource">
+                        </instanceof>
+                        <or>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtc">
+                           </test>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtcd">
+                           </test>
+                        </or>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="mtc.transformation.gen.documentation"
+               style="push">
+            <visibleWhen>
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false">
+                     <and>
+                        <instanceof
+                              value="org.eclipse.core.resources.IResource">
+                        </instanceof>
+                        <or>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtc">
+                           </test>
+                           <test
+                                 property="org.eclipse.core.resources.name"
+                                 value="*.mtcd">
+                           </test>
+                        </or>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <visibleWhen>
+            <with
+                  variable="selection">
+               <iterate
+                     ifEmpty="false">
+                  <and>
+                     <instanceof
+                           value="org.eclipse.core.resources.IResource">
+                     </instanceof>
+                     <or>
+                        <test
+                              property="org.eclipse.core.resources.name"
+                              value="*.mtc">
+                        </test>
+                        <test
+                              property="org.eclipse.core.resources.name"
+                              value="*.mtcd">
+                        </test>
+                     </or>
+                  </and>
+               </iterate>
+            </with>
+         </visibleWhen>
+      </menu>
+    </menuContribution>
+  </extension>
+  <extension point="org.eclipse.ui.commands">
+     <category
+           id="com.mtcflow.project.eclipse.plugin.mtc"
+           name="MTC">
+     </category>
+    <command
+          categoryId="com.mtcflow.project.eclipse.plugin.mtc"
+          defaultHandler="com.mtcflow.project.command.RunMTCCommand"
+          id="mtc.transformation.run.command"
+          name="Run MTC">
+    </command>
+    <command
+          categoryId="com.mtcflow.project.eclipse.plugin.mtc"
+          defaultHandler="com.mtcflow.project.command.RunMTCCommand"
+          id="mtc.transformation.run.tags.command"
+          name="Run MTC with tags">
+    </command>
+    <command
+          categoryId="com.mtcflow.project.eclipse.plugin.mtc"
+          defaultHandler="com.mtcflow.project.command.RunMTCCommand"
+          id="mtc.transformation.create.command"
+          name="Create Artifacts">
+    </command>
+    <command
+          categoryId="com.mtcflow.project.eclipse.plugin.mtc"
+          defaultHandler="com.mtcflow.project.command.RunMTCCommand"
+          id="mtc.transformation.gen.documentation"
+          name="Generate MTC Documentation">
+    </command>
+    <command
+          categoryId="com.mtcflow.project.eclipse.plugin.mtc"
+          defaultHandler="com.mtcflow.project.command.CreateDiagramCommand"
+          id="mtc.transformation.gen.diagram"
+          name="Create MTC Diagram">
+    </command>
+  </extension>
+  <extension
+        point="org.eclipse.ui.startup">
+     <startup></startup>
+  </extension>
+  <extension
+        point="org.eclipse.debug.ui.launchShortcuts">
+     <shortcut
+           class="com.mtcflow.project.launching.LaunchMTCShortcut"
+           icon="img/chain.png"
+           id="com.mtcflow.project.shortcut"
+           label="Execute MTC"
+           modes="run, debug">
+            <contextualLaunch>
+           <enablement>
+             <with variable="selection">
+               <count value="1"/>
+               <iterate>
+                 <or>
+                   <test property="org.eclipse.debug.ui.matchesPattern" value="*.mtc"/>
+                   <test property="org.eclipse.debug.ui.matchesPattern" value="*.mtcd"/>
+                 </or>
+               </iterate>
+             </with>
+           </enablement>
+  		 </contextualLaunch>
+     </shortcut>
+  </extension>
+  
+  
+       
+     
+</plugin>

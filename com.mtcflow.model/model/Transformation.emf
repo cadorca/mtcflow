@@ -1,0 +1,216 @@
+@namespace(uri="http://com.mtcflow.mtc/1.0", prefix="com.mtcflow.model")
+package mtc;
+
+@gmf.diagram(model.extension="mtc", diagram.extension="mtcdiag")
+class MTC {
+  attr String[1] name = "MTC";
+  val File[*] files;
+  val Metamodel[*] metamodels;
+  val Model[*] models;
+  val InputModel[*] inputModels;
+  val Transformation[*] transformations;
+  val OutputModel[*] outputModels;
+  attr String[1] M2MTechnology = "ATL";
+  attr String[1] M2TTechnology = "ACCELEO";
+  attr String[1] HOTTechnology = "ATL";
+  attr String[1] metamodelsFolder = "/metamodels/";
+  attr String[1] modelsFolder = "/models/";
+  attr String[1] M2MTransformationsFolder = "/transformations/M2M/";
+  attr String[1] M2TTransformationsFolder = "/transformations/M2T/";
+  val Validation[*] validations;
+  val Configuration configurations;
+  attr String[1] HOTransformationsFolder = "/transformations/HOT/";
+  attr String[1] validationsFolder = "/validations/";
+  attr String[1] version = "1.0";
+  attr String[1] librariesFolder = "/libraries/";
+  attr String description;
+  val ReferencedResource[*] referencedResources;
+  attr boolean[1] validateConformance = true;
+  attr String[1] workspace = "/workspace/";
+  transient attr ecore.EMap<EJavaObject, EJavaObject> executionInformation;
+}
+
+@gmf.node(label.icon="false", label="name",figure="polygon",  polygon.x="0 0 10 10 8 8 10 8 0", polygon.y="0 10 10 2 2 0 2 0 0", border.color="88,88,88", tool.small.path="icons/metamodel.png", size="83,105")
+class Metamodel extends MTCResource {
+  attr String[1] alias;
+  attr boolean[1] autoregister = true;
+}
+
+@gmf.node(label.icon="false", label="name", figure="polygon", polygon.x="0 0 10 10 8 8 10 8 0", polygon.y="0 10 10 2 2 0 2 0 0", border.color="88,88,88",  tool.small.path="icons/refresource.png",  tool.name="Referenced Resource", tool.description="Create a new Referenced Resource", size="83,105")
+class ReferencedResource extends MTCResource {
+  attr String type;
+}
+
+@gmf.node(label.icon="false", label="name", figure="polygon",  polygon.x="0 0 10 10 8 8 10 8 0", polygon.y="0 10 10 2 2 0 2 0 0", border.color="88,88,88",  tool.small.path="icons/file.png", tool.name="File", tool.description="Create a new Output File", size="83,105")
+class File extends MTCResource {
+  attr FileType type;
+}
+
+@gmf.node(label.icon="false", label="name", figure="polygon",  polygon.x="0 0 10 10 8 8 10 8 0", polygon.y="0 10 10 2 2 0 2 0 0", border.color="88,88,88", tool.small.path="icons/model.png", tool.name="Model", tool.description="Create a new Model", size="83,105")
+class Model extends MTCResource {
+  op Metamodel[1] getMainMetamodel();
+
+  @gmf.link(target.decoration="filledsquare", label="conforms to", style="dot", width="1", color="207,207,207", tool.small.path="icons/link.png")
+  ref Metamodel[+] metamodel;
+
+  @gmf.link(target.decoration="filledsquare", source.decoration="square", style="dash", width="1", color="69,139,0", tool.small.path="icons/link.png")
+  ref Validation[*] validations;
+  attr String format;
+}
+
+@gmf.node(label.icon="false", figure="polygon",  polygon.x="0 0 10 10 8 8 10 8 0", polygon.y="0 10 10 2 2 0 2 0 0", border.color="88,88,88", tool.small.path="icons/validation.png", label="name", tool.name="Validation", tool.description="Create a new Validation", size="83,105")
+class Validation extends MTCResource {
+  attr boolean[1] required = true;
+}
+
+@gmf.node(label.icon="false", label="name", tool.small.path="icons/hot.png", tool.name="HOT - High Order Tranformation", tool.description="Create a new High Order Transformation", size="200,49" , border.color="0,0,0")
+class HOTransformation extends M2TTransformation, T2MTransformation, M2MTransformation {
+
+  @gmf.link(label="GEN", target.decoration="filledclosedarrow", tool.name="Generated Transformations", width="3", color="77,77,77", style="solid", incoming="true", tool.small.path="icons/link.png")
+  ref Transformation[*] outputTransformations;
+}
+
+@gmf.node(label.icon="false", label="name",  tool.small.path="icons/m2m.png",tool.name="M2M - Model To Model", tool.description="Create a new Model To Model Transformation (M2M)", size="200,49", border.color="0,0,0")
+class M2MTransformation extends ModelProducerTransformation {
+  attr boolean[1] refinement = false;
+}
+
+@gmf.node(label.icon="false", label="name",  tool.small.path="icons/m2t.png", tool.name="M2T - Model To Text", tool.description="Create a new Model To Text Transformation (M2T)", size="200,49", border.color="0,0,0")
+class M2TTransformation extends Transformation {
+  attr String[*] templatesName;
+
+  @gmf.link(label="generates", target.decoration="filledclosedarrow", width="2", color="77,77,77", style="solid", tool.small.path="icons/link.png")
+  ref File[*] outputFiles;
+  attr String target;
+}
+
+@gmf.node(label.icon="false", label="name", tool.small.path="icons/mtc.png", tool.name="MTC - Model T. Chain", tool.description="Create a new Model Transformation Chain", size="200,49", border.color="0,0,0")
+class MTCTransformation extends M2TTransformation, T2MTransformation, M2MTransformation {
+}
+
+@gmf.node(label.icon="false", label="name", tool.small.path="icons/t2m.png", tool.name="T2M - Text To Model", tool.description="Create a new Text To Model Transformation (T2M)", size="200,49", border.color="0,0,0")
+class T2MTransformation extends ModelProducerTransformation {
+
+  @gmf.link(source.decoration="filledclosedarrow", width="2", color="77,77,77", style="solid", tool.small.path="icons/link.png", incoming="true")
+  ref File[*] inputFiles;
+}
+
+
+
+@gmf.link(source="model", target="transformation", label="alias", width="2", color="77,77,77", target.decoration="filledclosedarrow", incoming="true", tool.small.path="icons/link.png")
+class InputModel {
+  op String getFinalMetamodelAlias();
+  ref Model[1] model;
+  attr String[1] alias = "IN";
+  ref Transformation[1] transformation;
+  attr String metamodelAlias;
+  attr Integer index;
+}
+
+@gmf.link(source="transformation", target="model", label="alias", width="2", color="77,77,77", target.decoration="filledclosedarrow", incoming="true", tool.small.path="icons/link.png")
+class OutputModel {
+  op String getFinalMetamodelAlias();
+  attr String[1] alias = "OUT";
+  ref Model[1] model;
+  ref ModelProducerTransformation[1] transformation;
+  attr String metamodelAlias;
+}
+
+abstract class Transformation extends MTCResource {
+  attr String technology;
+  attr String implementationClass;
+  ref Library[*] libraries;
+  ref Script preExecutionScript;
+  ref Script postExecutionScript;
+
+  @org.eclipse.gmf.codegen.gmfgen.GenLink
+  @gmf.link(target.decoration="filledsquare", tool.name="Depends on model", style="solid", width="1", color="74,118,110", label="depends on", incoming="true", tool.small.path="icons/link.png")
+  ref Model[*] modelDependencies;
+
+  @gmf.link(source.decoration="filledsquare", tool.name="Depends on file", style="solid", width="1", color="74,118,110", label="depends on", incoming="true", tool.small.path="icons/link.png")
+  ref File[*] fileDependencies;
+}
+
+enum FileType {
+  JSF = 3;
+  JSP = 4;
+  PROPERTIES = 2;
+  ASPECT = 5;
+  JAVA = 1;
+  XML = 0;
+}
+
+abstract class MTCResource {
+  op boolean inWorkspace();
+  attr String[1] name;
+  attr String URI;
+  attr String file;
+  ref Tag[*] tags;
+  attr String description;
+  val Property[*] properties;
+
+  @gmf.link(target.decoration="filledclosedarrow", label="ref", style="dash", width="1", color="96,139,50", incoming="true" , tool.small.path="icons/link.png")
+  ref ReferencedResource[*] referencedResources;
+  transient attr ecore.EMap<EJavaObject, EJavaObject> executionInformation;
+}
+
+@gmf.node(label="name", tool.small.path="icons/variable.png")
+class Variable {
+  attr String[1] name;
+  attr String defaultValue;
+  attr String description;
+  attr String type;
+} 
+
+@gmf.node(label="name", tool.small.path="icons/configuration.png", tool.name="MTC Configuration", tool.description="Create a new Configuration")
+class Configuration {
+  attr String[1] name = "Configuration";
+
+  @gmf.compartment(layout="list", collapsible="true")
+  val Variable[*] variables;
+
+  @gmf.compartment(layout="list", collapsible="true")
+  val Tag[*] tags;
+
+  @gmf.compartment(layout="list", collapsible="true")
+  val Library[*] libraries;
+
+  @gmf.compartment(layout="list", collapsible="true")
+  val Script[*] scripts;
+
+  @gmf.compartment(layout="list", collapsible="true")
+  val ModelEnvironment[*] environments;
+}
+
+abstract class ModelProducerTransformation extends Transformation {
+}
+
+@gmf.node(label="name",  tool.small.path="icons/library.png")
+class Library extends MTCResource {
+}
+
+@gmf.node(label="name",  tool.small.path="icons/tag.png")
+class Tag {
+  attr String[1] name;
+  attr String description;
+}
+
+@gmf.node(label="name",  tool.small.path="icons/script.png")
+class Script extends MTCResource {
+  attr String implementationClass;
+}
+
+@gmf.node(label="name",  tool.small.path="icons/modelenvironment.png")
+class ModelEnvironment {
+  attr String[1] name;
+  attr String implementationClass;
+  attr String[*] params;
+}
+
+class Property {
+  attr String name;
+  attr String value;
+}
+
+
+

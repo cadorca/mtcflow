@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="MTC" version="8.1.0">
+  <ownedViewpoints name="mtc" label="MTC" modelFileExtension="mtc">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="MTC Diagram" initialisation="true" showOnStartup="true" domainClass="mtc.MTC" enablePopupBars="true">
+      <filters xsi:type="filter:CompositeFilterDescription" name="Metamodels" label="Hide Metamodels">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_metamodel']"/>
+      </filters>
+      <layout xsi:type="description_1:CompositeLayout" padding="60" direction="LeftToRight"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="M2MTransformation" deletionDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Transformation']" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" semanticCandidatesExpression="service:self.getM2MTransformations()" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="mtc.M2MTransformation">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="10" iconPath="/com.mtcflow.diagram/images/m2m.png" labelAlignment="LEFT" tooltipExpression="Double click to open the related file" sizeComputationExpression="8" labelPosition="node" resizeKind="EAST_WEST" width="16" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="M2TTransformation" deletionDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Transformation']" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" semanticCandidatesExpression="service:self.getM2TTransformations()" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="mtc.M2TTransformation">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="10" iconPath="/com.mtcflow.diagram/images/m2t.png" labelAlignment="LEFT" tooltipExpression="Double click to open the related file" sizeComputationExpression="8" labelPosition="node" resizeKind="EAST_WEST" width="16" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="T2MTransformation" deletionDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Transformation']" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" semanticCandidatesExpression="service:self.getT2MTransformations()" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="mtc.T2MTransformation">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="10" iconPath="/com.mtcflow.diagram/images/t2m.png" labelAlignment="LEFT" tooltipExpression="Double click to open the related file" sizeComputationExpression="8" labelPosition="node" resizeKind="EAST_WEST" width="16" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="HOTTransformation" label="HOTransformation" deletionDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Transformation']" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="mtc.HOTransformation">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="10" iconPath="/com.mtcflow.diagram/images/hot.png" labelAlignment="LEFT" tooltipExpression="Double click to open the related file" sizeComputationExpression="8" labelPosition="node" resizeKind="EAST_WEST" width="16" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="MTCTransformation" deletionDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Transformation']" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="mtc.MTCTransformation">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="10" iconPath="/com.mtcflow.diagram/images/mtc.png" labelAlignment="LEFT" tooltipExpression="Double click to open the related file" sizeComputationExpression="8" labelPosition="node" resizeKind="EAST_WEST" width="16" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="artifact_model" label="Model" deletionDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Model']" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="mtc.Model">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="10" showIcon="false" iconPath="/com.mtcflow.diagram/icons/model.png" labelPosition="node" resizeKind="NSEW" width="9" height="11">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="artifact_metamodel" label="Metamodel" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="Metamodel">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="10" showIcon="false" iconPath="/com.mtcflow.diagram/icons/model.png" labelPosition="node" resizeKind="NSEW" width="9" height="11">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="artifact_file" label="File" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="mtc.File">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="10" showIcon="false" iconPath="/com.mtcflow.diagram/icons/file.png" labelPosition="node" resizeKind="NSEW" width="9" height="11">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="artifact_ref_resource" label="Ref Resource" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="ReferencedResource">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="10" showIcon="false" iconPath="/com.mtcflow.diagram/icons/refresource.png" labelPosition="node" resizeKind="NSEW" width="9" height="11">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Decision" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" domainClass="mtc.Decision">
+          <style xsi:type="style:LozengeNodeDescription" borderSizeComputationExpression="1" labelSize="9" showIcon="false" sizeComputationExpression="6" resizeKind="NSEW" color="//@userColorsPalettes[name='MTCFlow%20Pallete']/@entries[name='Choise']">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Metamodel" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_metamodel']" targetFinderExpression="feature:metamodels">
+          <style sourceArrow="OutputFillClosedArrow" targetArrow="OutputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="conforms">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Input Model" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editAlias']" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2TTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='MTCTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation']" targetFinderExpression="feature:transformation" sourceFinderExpression="feature:model" domainClass="mtc.InputModel" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="3" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="9" showIcon="false" labelExpression="feature:modelAlias">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Output Model" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editAlias']" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='MTCTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='T2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model']" targetFinderExpression="feature:model" sourceFinderExpression="feature:transformation" domainClass="mtc.OutputModel" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="9" showIcon="false" labelExpression="feature:modelAlias">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Output Transformation" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2TTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='MTCTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='T2MTransformation']" targetFinderExpression="feature:outputTransformations">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="generates">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Input File" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_file']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='T2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='MTCTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation']" targetFinderExpression="feature:transformation" sourceFinderExpression="feature:file" domainClass="mtc.InputFile" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="3" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="9" showIcon="false" labelExpression="input">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Output File" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2TTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='MTCTransformation']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_file']" targetFinderExpression="feature:file" sourceFinderExpression="feature:transformation" domainClass="mtc.OutputFile" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="9" showIcon="false" labelExpression="generates">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Decision Input Model" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='Decision']" targetFinderExpression="feature:decision" sourceFinderExpression="feature:model" domainClass="mtc.DecisionInputModel" useDomainElement="true">
+          <style sizeComputationExpression="3" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="9" showIcon="false" labelExpression="feature:modelAlias">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Choise" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editChoise']" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='Decision']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2TTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='MTCTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='T2MTransformation']" targetFinderExpression="feature:transformation" sourceFinderExpression="feature:decision" domainClass="mtc.Choise" useDomainElement="true">
+          <style sizeComputationExpression="3" routingStyle="manhattan" foldingStyle="SOURCE">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="9" showIcon="false" labelExpression="feature:choiseValue">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Referenced Resource" deletionDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Ref%20Resource']" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_file'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2TTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='MTCTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='T2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@additionalLayers[name='Validation']/@nodeMappings[name='artifact_validacion'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_metamodel']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_ref_resource']" targetFinderExpression="feature:referencedResources">
+          <style sourceArrow="OutputFillClosedArrow" targetArrow="OutputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Configuration" label="Configuration" domainClass="mtc.Configuration" childrenPresentation="List">
+          <subNodeMappings name="Variable" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" domainClass="mtc.Variable">
+            <style xsi:type="style:SquareDescription" labelSize="11" labelFormat="bold_italic" iconPath="/com.mtcflow.diagram/icons/variable.png" labelAlignment="LEFT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Library" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="mtc.Library">
+            <style xsi:type="style:SquareDescription" labelSize="11" iconPath="/com.mtcflow.diagram/icons/library.png" labelAlignment="LEFT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Tag" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" domainClass="mtc.Tag">
+            <style xsi:type="style:SquareDescription" labelSize="11" iconPath="/com.mtcflow.diagram/icons/tag.png" labelAlignment="LEFT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Script" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="mtc.Script">
+            <style xsi:type="style:SquareDescription" labelSize="11" iconPath="/com.mtcflow.diagram/icons/script.png" labelAlignment="LEFT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Model Environment" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" domainClass="mtc.ModelEnvironment">
+            <style xsi:type="style:SquareDescription" labelSize="11" iconPath="/com.mtcflow.diagram/icons/modelenvironment.png" labelAlignment="LEFT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="11" labelExpression="Configuration" iconPath="/com.mtcflow.diagram/icons/configuration.png" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Connections">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Workflow Connection" label="Workflow" edgeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@edgeMappings[name='Input%20Model'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@edgeMappings[name='Output%20Model'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@edgeMappings[name='Output%20Transformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@edgeMappings[name='Input%20File'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@edgeMappings[name='Output%20File'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@edgeMappings[name='Decision%20Input%20Model'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@edgeMappings[name='Choise'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@edgeMappings[name='Referenced%20Resource']" iconPath="/com.mtcflow.diagram/icons/link.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
+                <subModelOperations xsi:type="tool_1:Switch">
+                  <cases conditionExpression="service:isInputModel(source,target)">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.InputModel" referenceName="inputModels">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="model" valueExpression="var:source">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="transformation" valueExpression="var:target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </cases>
+                  <cases conditionExpression="service:isOutputModel(source,target)">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.OutputModel" referenceName="outputModels">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="model" valueExpression="var:target">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="transformation" valueExpression="var:source"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </cases>
+                  <cases conditionExpression="service:isHotOutput(source,target)">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="outputTransformations" valueExpression="var:target"/>
+                    </subModelOperations>
+                  </cases>
+                  <cases conditionExpression="service:isInputFile(source,target)">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.InputFile" referenceName="inputFiles">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="file" valueExpression="var:source">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="transformation" valueExpression="var:target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </cases>
+                  <cases conditionExpression="service:isOutputFile(source,target)">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.OutputFile" referenceName="outputFiles">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="file" valueExpression="var:target">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="transformation" valueExpression="var:source"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </cases>
+                  <cases conditionExpression="service:isDecisionInputModel(source,target)">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.DecisionInputModel" referenceName="decisionInputModels">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="model" valueExpression="var:source">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="decision" valueExpression="var:target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </cases>
+                  <cases conditionExpression="service:isChoise(source,target)">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Choise" referenceName="choises">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="transformation" valueExpression="var:target"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="decision" valueExpression="var:source"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </cases>
+                  <cases conditionExpression="service:isRefResource(source,target)">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="referencedResources" valueExpression="var:target"/>
+                    </subModelOperations>
+                  </cases>
+                  <default/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Metamodel" label="Metamodel" edgeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@edgeMappings[name='Metamodel']" iconPath="/com.mtcflow.diagram/icons/link.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="metamodels" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Workflow Control">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_decision" label="Decision" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='Decision']" iconPath="/com.mtcflow.diagram/icons/decision.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Decision" referenceName="decisions" variableName="model"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="BAsic" label="Basic">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="openElement" mappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_file'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2TTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_metamodel'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='T2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@containerMappings[name='Configuration']/@subNodeMappings[name='Library'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@containerMappings[name='Configuration']/@subNodeMappings[name='Script'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='MTCTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_ref_resource'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@additionalLayers[name='Validation']/@nodeMappings[name='artifact_validacion']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaActionCall" name="Invoke Related File" action="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openFile']"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Model">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:For" expression="service:getInOutTransformations()" iteratorName="item">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Ref Resource">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:Unset" featureName="referencedResources" elementExpression="service:deleteRefResource(elementView)"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete ModelApplication">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:DeleteView"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Transformation">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:For" expression="service:getInOutModels()" iteratorName="item">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editNode">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:arg0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editChoise" inputLabelExpression="feature:choiseValue">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="choiseValue" valueExpression="var:arg0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editAlias" inputLabelExpression="modelAlias">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="modelAlias" valueExpression="var:arg0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ExternalJavaAction" name="Execute Resource" label="Execute" icon="/com.mtcflow.diagram/icons/play.png" id="com.mtcflow.diagram.executeActions"/>
+          <ownedTools xsi:type="tool_1:ExternalJavaAction" name="openFile" label="Open File" id="com.mtcflow.diagram.openActions"/>
+        </toolSections>
+        <toolSections name="Artifacts">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_model" label="Model" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model']" iconPath="/com.mtcflow.diagram/icons/model.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Model" referenceName="models" variableName="model">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Metamodel" referenceName="metamodels" variableName="metamodel">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:model">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="metamodels" valueExpression="var:metamodel"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_metamodel" label="Metamodel" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_metamodel']" iconPath="/com.mtcflow.diagram/icons/metamodel.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Metamodel" referenceName="metamodels"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_file" label="File" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_file']" iconPath="/com.mtcflow.diagram/icons/file.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.File" referenceName="files"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_refresource" label="Ref. Resource" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_ref_resource']" iconPath="/com.mtcflow.diagram/icons/refresource.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.ReferencedResource" referenceName="referencedResources"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Transformations" label="Transformations" icon="/com.mtcflow.diagram/icons/transformations.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_m2m" label="M2M - Model to Model" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2MTransformation']" iconPath="/com.mtcflow.diagram/icons/m2m.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.M2MTransformation" referenceName="transformations"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_m2t" label="M2T - Model to Text" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2TTransformation']" iconPath="/com.mtcflow.diagram/icons/m2t.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.M2TTransformation" referenceName="transformations"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_t2m" label="T2M - Text to Model" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='T2MTransformation']" iconPath="/com.mtcflow.diagram/icons/t2m.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.T2MTransformation" referenceName="transformations"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_hot" label="HOT - Higher Order" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation']" iconPath="/com.mtcflow.diagram/icons/hot.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.HOTransformation" referenceName="transformations"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_mtc" label="MTC - Transformation Chain" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation']" iconPath="/com.mtcflow.diagram/icons/mtc.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.MTCTransformation" referenceName="transformations"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Validation">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create_validation" label="Validation" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@additionalLayers[name='Validation']/@nodeMappings[name='artifact_validacion']" iconPath="/com.mtcflow.diagram/icons/validation.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Validation" referenceName="validations"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Configuration" icon="/com.mtcflow.diagram/icons/configuration.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Configuration" precondition="service:enableConfiguration()" containerMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@containerMappings[name='Configuration']" iconPath="/com.mtcflow.diagram/icons/configuration.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Configuration" referenceName="configurations"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="variable" label="Variable" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@containerMappings[name='Configuration']/@subNodeMappings[name='Variable']" iconPath="/com.mtcflow.diagram/icons/variable.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Variable" referenceName="variables"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="library" label="Library" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@containerMappings[name='Configuration']/@subNodeMappings[name='Library']" iconPath="/com.mtcflow.diagram/icons/library.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Library" referenceName="libraries"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="tag" label="Tag" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@containerMappings[name='Configuration']/@subNodeMappings[name='Tag']" iconPath="/com.mtcflow.diagram/icons/tag.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Tag" referenceName="tags"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="script" label="Script" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@containerMappings[name='Configuration']/@subNodeMappings[name='Script']" iconPath="/com.mtcflow.diagram/icons/script.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.Script" referenceName="scripts"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="model_environment" label="Model Environment" nodeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@containerMappings[name='Configuration']/@subNodeMappings[name='Model%20Environment']" iconPath="/com.mtcflow.diagram/icons/modelenvironment.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.ModelEnvironment" referenceName="environments"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <decorationDescriptionsSet>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="FileArtifact" position="NORTH" decoratorPath="/com.mtcflow.diagram/images/file.png" mappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_file']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="ModelArtifact" position="NORTH" decoratorPath="/com.mtcflow.diagram/images/model.png" mappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="RefArtifact" position="NORTH" decoratorPath="/com.mtcflow.diagram/images/refresource.png" mappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_ref_resource']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="Corner" position="NORTH_EAST" decoratorPath="/com.mtcflow.diagram/icons/corner.png" mappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_metamodel'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_file'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_ref_resource'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@additionalLayers[name='Validation']/@nodeMappings[name='artifact_validacion']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="MetamodelArtifact" position="NORTH" decoratorPath="/com.mtcflow.diagram/images/metamodel.png" mappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_metamodel']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="ValidationArtifact" position="NORTH" decoratorPath="/com.mtcflow.diagram/images/validation.png" mappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@additionalLayers[name='Validation']/@nodeMappings[name='artifact_validacion']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="Transformation Gear" position="NORTH_EAST" decoratorPath="/com.mtcflow.diagram/images/transformation_gear.png" mappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='M2TTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='MTCTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='T2MTransformation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='HOTTransformation']"/>
+        </decorationDescriptionsSet>
+      </defaultLayer>
+      <additionalLayers name="Validation" activeByDefault="true">
+        <nodeMappings name="artifact_validacion" label="Validation" labelDirectEdit="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editNode']" doubleClickDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='openElement']" domainClass="Validation">
+          <borderedNodeMappings name="Model Validation" semanticCandidatesExpression="service:self.getModelValidations()" domainClass="mtc.ModelValidation">
+            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelFormat="bold" labelExpression="V" iconPath="/com.mtcflow.diagram/icons/validation.png" labelAlignment="LEFT" labelPosition="node" hideLabelByDefault="true" width="2" height="2">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="10" labelFormat="bold" showIcon="false" iconPath="/com.mtcflow.diagram/icons/validation.png" labelPosition="node" resizeKind="NSEW" width="9" height="11">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Model Validation Link" deletionDescription="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20ModelApplication']" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@additionalLayers[name='Validation']/@nodeMappings[name='artifact_validacion']/@borderedNodeMappings[name='Model%20Validation']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model']" targetFinderExpression="feature:models">
+          <style strokeColor="//@userColorsPalettes[name='MTCFlow%20Pallete']/@entries[name='Validation%20Link']" sizeComputationExpression="2" routingStyle="manhattan">
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Model Validation" semanticCandidatesExpression="null" sourceMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@additionalLayers[name='Validation']/@nodeMappings[name='artifact_validacion']" targetMapping="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@defaultLayer/@nodeMappings[name='artifact_model']" targetFinderExpression="feature:models" sourceFinderExpression="feature:validation" domainClass="mtc.ModelValidation" useDomainElement="true">
+          <style strokeColor="//@userColorsPalettes[name='MTCFlow%20Pallete']/@entries[name='Validation%20Link']" sizeComputationExpression="2" routingStyle="manhattan">
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Connections">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create_validation" label="Validation" edgeMappings="//@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@additionalLayers[name='Validation']/@edgeMappings[name='Model%20Validation'] //@ownedViewpoints[name='mtc']/@ownedRepresentations[name='MTC%20Diagram']/@additionalLayers[name='Validation']/@edgeMappings[name='Model%20Validation%20Link']" iconPath="/com.mtcflow.diagram/icons/link.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[source.oclIsTypeOf(Validation) and target.oclIsTypeOf(Model)/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mtc.ModelValidation" referenceName="modelValidations">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="validation" valueExpression="var:source">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="models" valueExpression="var:target"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[source.oclIsTypeOf(ModelValidation) and target.oclIsTypeOf(Model)/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="models" valueExpression="var:target"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="com.mtcflow.diagram.services.MtcServices"/>
+  </ownedViewpoints>
+  <userColorsPalettes name="MTCFlow Pallete">
+    <entries xsi:type="description:UserFixedColor" red="204" green="242" blue="180" name="Choise"/>
+    <entries xsi:type="description:UserFixedColor" red="96" green="139" blue="50" name="Validation Link"/>
+  </userColorsPalettes>
+</description:Group>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.mtcflow.model:MTC xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.mtcflow.model="http://com.mtcflow.mtc/1.1" validateConformance="false">
+  <metamodels name="vncvncvncvn"/>
+  <metamodels name="cvncvncvn"/>
+  <models name="A Model"/>
+  <models name="The output"/>
+  <models metamodels="//@metamodels.0"/>
+  <inputModels model="//@models.0" transformation="//@transformations.0"/>
+  <transformations xsi:type="com.mtcflow.model:M2MTransformation" name="Gen La Cosa"/>
+  <transformations xsi:type="com.mtcflow.model:MTCTransformation" name="jnbjknjk jknjnkn"/>
+  <transformations xsi:type="com.mtcflow.model:M2MTransformation"/>
+  <outputModels model="//@models.1" transformation="//@transformations.0"/>
+  <validations name="sdkjfsdfkjsdfjksdf"/>
+</com.mtcflow.model:MTC>
