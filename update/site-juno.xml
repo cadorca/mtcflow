@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site
-      associateSitesURL="http://www.mobius-mde.com/downloads/mtcflow/update/associateSitesJuno.xml">
+      associateSitesURL="http://www.mtcflow.com/update/associateSitesKepler.xml">
   <description name="MTC Flow">
       MTC Flow
    </description>
