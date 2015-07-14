@@ -1,9 +1,0 @@
-[%
-for(clazz in EClass.all){
-var templateName : Template;
--- Pass parameters to the template
-templateName := TemplateFactory.load('EClass.egl');
-templateName.populate('clazz', clazz);
-templateName.generate('../src/com/mtcflow/model/mtc/cimpl/'+clazz.name+'CImpl.java');
-}
-%]

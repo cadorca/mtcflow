@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<eef-gen:EEFGenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:eef-gen="http://www.eclipse.org/emf/eef/generation/1.0.0" genDirectory="/com.mtcflow.model.edit/src-gen">
-  <editionContexts basePackage="com.mtcflow.model" descriptorsGenericPropertiesViews="true">
-    <PropertiesEditionContext href="Transformation.components#_MGQwEHNaEeOUoJDrNAs6bA"/>
-  </editionContexts>
-  <viewsRepositories basePackage="com.mtcflow.model.mtc" swtViews="true" formViews="true">
-    <viewsRepository href="Transformation.components#_MGQw9HNaEeOUoJDrNAs6bA"/>
-  </viewsRepositories>
-</eef-gen:EEFGenModel>

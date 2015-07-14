@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<eef-gen:EEFGenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:eef-gen="http://www.eclipse.org/emf/eef/generation/1.0.0" genDirectory="/com.mtcflow.model.editor/src-gen">
-  <editionContexts basePackage="com.mtcflow.model" descriptorsContributorID="org.eclipse.sirius.diagram" descriptorsGenericPropertiesViews="true" gmfPropertiesViews="true">
-    <PropertiesEditionContext href="Transformation-editor.components#_OVZhIHNaEeOUoJDrNAs6bA"/>
-  </editionContexts>
-  <viewsRepositories basePackage="com.mtcflow.model.mtc" swtViews="true" formViews="true">
-    <viewsRepository href="Transformation-editor.components#_OVZhJHNaEeOUoJDrNAs6bA"/>
-  </viewsRepositories>
-</eef-gen:EEFGenModel>
