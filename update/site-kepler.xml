@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site
+      associateSitesURL="http://www.mobius-mde.com/downloads/mtcflow/update/associateSitesKepler.xml">
+  <description name="MTC Flow">
+      MTC Flow
+   </description>
+   <feature url="features/com.mtcflow.engine.core.feature_1.2.0.201506012139.jar" id="com.mtcflow.engine.core.feature" version="1.2.0.201506012139">
+      <category name="MTC FLow"/>
+   </feature>
+   <feature url="features/com.mtcflow.designer.feature_1.2.0.201506012139.jar" id="com.mtcflow.designer.feature" version="1.2.0.201506012139">
+      <category name="MTC FLow"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.acceleo.feature_1.2.0.201506012139.jar" id="com.mtcflow.engine.acceleo.feature" version="1.2.0.201506012139">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.atl.feature_1.2.0.201506012139.jar" id="com.mtcflow.engine.atl.feature" version="1.2.0.201506012139">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.egl.feature_1.2.0.201506012139.jar" id="com.mtcflow.engine.egl.feature" version="1.2.0.201506012139">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.eml.feature_1.2.0.201506012139.jar" id="com.mtcflow.engine.eml.feature" version="1.2.0.201506012139">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.eol.feature_1.2.0.201506012139.jar" id="com.mtcflow.engine.eol.feature" version="1.2.0.201506012139">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.etl.feature_1.2.0.201506012139.jar" id="com.mtcflow.engine.etl.feature" version="1.2.0.201506012139">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.evl.feature_1.2.0.201506012139.jar" id="com.mtcflow.engine.evl.feature" version="1.2.0.201506012139">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.qvto.feature_1.2.0.201506012139.jar" id="com.mtcflow.engine.qvto.feature" version="1.2.0.201506012139">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.xtext.feature_1.2.0.201506012139.jar" id="com.mtcflow.engine.xtext.feature" version="1.2.0.201506012139">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <category-def name="MTC FLow" label="MTC FLow"/>
+   <category-def name="MTC Flow Technology Support" label="MTC Flow Technology Support"/>
+</site>
