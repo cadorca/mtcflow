@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.mtcflow.engine.managers">
+      <manager
+            class="com.mtcflow.engine.evl.EVLTechnologyManager">
+      </manager>
+   </extension>
+      <extension
+         point="com.mtcflow.engine.managers">
+      <manager
+            class="com.mtcflow.engine.etl.ETLTechnologyManager">
+      </manager>
+   </extension>
+   <extension
+         point="com.mtcflow.engine.managers">
+      <manager
+            class="com.mtcflow.engine.eol.EOLTechnologyManager">
+      </manager>
+   </extension>
+   <extension
+         point="com.mtcflow.engine.managers">
+      <manager
+            class="com.mtcflow.engine.eml.EMLTechnologyManager">
+      </manager>
+   </extension>
+   <extension
+         point="com.mtcflow.engine.managers">
+      <manager
+            class="com.mtcflow.engine.egl.EGLTechnologyManager">
+      </manager>
+   </extension>      
+</plugin>

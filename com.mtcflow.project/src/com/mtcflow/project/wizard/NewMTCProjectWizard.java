@@ -38,6 +38,7 @@ public class NewMTCProjectWizard extends Wizard implements INewWizard {
 
 	private ProjectInfoPage pinfo;
 	private WizardNewProjectCreationPage basicPInfo;
+	private boolean canFinish = true;
 
 	public NewMTCProjectWizard() {
 		super();
@@ -60,6 +61,9 @@ public class NewMTCProjectWizard extends Wizard implements INewWizard {
 	public boolean performFinish() {
 		// Print the result to the console
 		// System.out.println(pinfo.getText1());
+		canFinish =false;
+		getContainer().updateButtons();
+
 		URI location = null;
 		if (!basicPInfo.useDefaults()) {
 			location = basicPInfo.getLocationURI();
@@ -90,7 +94,10 @@ public class NewMTCProjectWizard extends Wizard implements INewWizard {
 		//	MessageDialog.openError(workbenchWindow.getShell(), TransformationEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
 			return true;
 		}
-
+		 
+		canFinish =true;
+		getContainer().updateButtons();
+		
 		return true;
 	}
 

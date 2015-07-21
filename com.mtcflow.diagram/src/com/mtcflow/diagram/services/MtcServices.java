@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.sirius.diagram.DEdge;
 import org.eclipse.sirius.diagram.DNode;
 
@@ -124,6 +125,10 @@ public class MtcServices {
 		}
 		resp.add(model);
 		return resp;
+	}
+	
+	public EObject copy(EObject obj){
+		return EcoreUtil.copy(obj);
 	}
 	
 	

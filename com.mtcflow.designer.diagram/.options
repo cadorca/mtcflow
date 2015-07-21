@@ -1,7 +1,0 @@
-# Tracing options for the com.mtcflow.diagram plug-in
-
-# Common issues
-com.mtcflow.diagram/debug=false
-
-# Visual IDs
-com.mtcflow.diagram/debug/visualID=false

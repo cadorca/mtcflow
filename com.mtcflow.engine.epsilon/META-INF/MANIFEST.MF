@@ -9,5 +9,19 @@ Require-Bundle: com.mtcflow.engine;visibility:=reexport,
  com.mtcflow.model;visibility:=reexport,
  org.eclipse.epsilon.common;visibility:=reexport,
  org.eclipse.epsilon.emc.emf;visibility:=reexport,
- org.eclipse.epsilon.eol.engine;visibility:=reexport
-Export-Package: com.mtcflow.engine.epsilon.common
+ org.eclipse.epsilon.eol.engine;visibility:=reexport,
+ org.eclipse.epsilon.erl.engine;bundle-version="1.0.0";visibility:=reexport,
+ org.eclipse.epsilon.evl.engine;visibility:=reexport,
+ org.eclipse.epsilon.etl.engine;bundle-version="1.0.0";visibility:=reexport,
+ org.eclipse.epsilon.erl.engine;bundle-version="1.0.0";visibility:=reexport,
+ org.eclipse.epsilon.eol.engine;visibility:=reexport, 
+ org.eclipse.epsilon.ecl.engine;bundle-version="1.0.0";visibility:=reexport,
+ org.eclipse.epsilon.eml.engine;bundle-version="1.0.0";visibility:=reexport,
+ org.eclipse.epsilon.etl.engine;bundle-version="1.0.0";visibility:=reexport,
+ org.eclipse.epsilon.egl.engine;visibility:=reexport 
+Export-Package: com.mtcflow.engine.egl,
+ com.mtcflow.engine.eml,
+ com.mtcflow.engine.eol,
+ com.mtcflow.engine.epsilon.common,
+ com.mtcflow.engine.etl,
+ com.mtcflow.engine.evl

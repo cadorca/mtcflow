@@ -53,7 +53,7 @@ public class DiagramLauncher implements IEditorLauncher {
 			try {
 				rsc.load(null);
 			} catch (IOException ex) {
-				ex.printStackTrace();
+				//ex.printStackTrace();
 			}
 			final DAnalysis root = (DAnalysis) rsc.getContents().get(0);
 			final DView dView = root.getOwnedViews().get(0);

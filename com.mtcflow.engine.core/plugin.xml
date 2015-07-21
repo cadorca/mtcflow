@@ -2,4 +2,13 @@
 <?eclipse version="3.4"?>
 <plugin>
 
+   <extension
+         id="MTC Manager"
+         name="MTC Manager"
+         point="com.mtcflow.engine.managers">
+      <manager
+            class="com.mtcflow.engine.mtc.MTCTechnologyManager">
+      </manager>
+   </extension>
+
 </plugin>

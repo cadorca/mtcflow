@@ -7,7 +7,9 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: com.mtcflow.engine.core,
  com.mtcflow.engine.core.utils,
- com.mtcflow.engine.core.validation
+ com.mtcflow.engine.core.validation,
+ com.mtcflow.engine.mtc
 Require-Bundle: com.mtcflow.model;visibility:=reexport,
  com.mtcflow.engine;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport
+Bundle-ClassPath: .

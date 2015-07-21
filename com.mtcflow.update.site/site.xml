@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site
+      associateSitesURL="http://www.mtcflow.com/update/associateSites.xml">
+   <description name="MTC Flow">
+      MTC Flow
+   </description>
+   <feature url="features/com.mtcflow.engine.core.feature_1.2.0.201507202116.jar" id="com.mtcflow.engine.core.feature" version="1.2.0.201507202116">
+      <category name="MTC FLow"/>
+   </feature>
+   <feature url="features/com.mtcflow.designer.feature_1.2.0.201507202116.jar" id="com.mtcflow.designer.feature" version="1.2.0.201507202116">
+      <category name="MTC FLow"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.acceleo.feature_1.2.0.201507202116.jar" id="com.mtcflow.engine.acceleo.feature" version="1.2.0.201507202116">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.atl.feature_1.2.0.201507202116.jar" id="com.mtcflow.engine.atl.feature" version="1.2.0.201507202116">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.qvto.feature_1.2.0.201507202116.jar" id="com.mtcflow.engine.qvto.feature" version="1.2.0.201507202116">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.xtext.feature_1.2.0.201507202116.jar" id="com.mtcflow.engine.xtext.feature" version="1.2.0.201507202116">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <feature url="features/com.mtcflow.engine.epsilon.feature_1.2.0.201507202116.jar" id="com.mtcflow.engine.epsilon.feature" version="1.2.0.201507202116">
+      <category name="MTC Flow Technology Support"/>
+   </feature>
+   <category-def name="MTC FLow" label="MTC FLow"/>
+   <category-def name="MTC Flow Technology Support" label="MTC Flow Technology Support"/>
+</site>

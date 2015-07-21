@@ -361,7 +361,8 @@
   </extension>
   <extension
         point="org.eclipse.ui.startup">
-     <startup></startup>
+     <startup
+           class="com.mtcflow.project.Activator"></startup>
   </extension>
   <extension
         point="org.eclipse.debug.ui.launchShortcuts">

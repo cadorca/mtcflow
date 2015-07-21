@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.mtcflow.engine.core.feature"
-      label="MTC Flow Core"
+      id="com.mtcflow.engine.epsilon.feature"
+      label="MTC Flow Epsilon Support"
       version="1.2.0.qualifier"
       provider-name="Camilo Alvarez">
 
    <description url="http://www.mtcflow.com/">
-      MTC Flow engine core dependencies.
+      This feature provides support for using Epsilon transformations in the engine.
    </description>
 
    <copyright>
@@ -218,78 +218,21 @@ litigation.
    </url>
 
    <requires>
-      <import plugin="org.eclipse.emf.ecore.xmi"/>
-      <import plugin="org.eclipse.swt"/>
-      <import plugin="org.eclipse.jface"/>
-      <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.eclipse.osgi"/>
-      <import plugin="org.eclipse.ui.console"/>
-      <import plugin="org.eclipse.ui.workbench"/>
-      <import plugin="org.eclipse.jdt.core"/>
-      <import plugin="org.eclipse.core.resources"/>
-      <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="org.eclipse.emf.eef.runtime"/>
-      <import plugin="org.eclipse.emf.eef.runtime.extended"/>
-      <import plugin="org.eclipse.ui.ide"/>
-      <import plugin="org.eclipse.debug.core"/>
-      <import plugin="org.eclipse.debug.ui"/>
-      <import plugin="org.eclipse.gmf.runtime.diagram.core"/>
-      <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
-      <import plugin="org.eclipse.sirius.ui"/>
-      <import plugin="org.eclipse.emf.common.ui"/>
-      <import plugin="org.eclipse.core.commands"/>
-      <import plugin="org.eclipse.core.jobs"/>
-      <import plugin="org.eclipse.emf.common"/>
-      <import plugin="org.eclipse.jdt.launching"/>
-      <import plugin="org.eclipse.jdt.ui"/>
-      <import plugin="org.eclipse.emf.ecore.editor"/>
+      <import plugin="com.mtcflow.engine"/>
+      <import plugin="com.mtcflow.model"/>
+      <import plugin="org.eclipse.epsilon.common"/>
+      <import plugin="org.eclipse.epsilon.emc.emf"/>
+      <import plugin="org.eclipse.epsilon.eol.engine"/>
+      <import plugin="org.eclipse.epsilon.erl.engine" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.evl.engine"/>
+      <import plugin="org.eclipse.epsilon.etl.engine" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.ecl.engine" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.eml.engine" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.epsilon.egl.engine"/>
    </requires>
 
    <plugin
-         id="com.mtcflow.engine"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.mtcflow.engine.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.mtcflow.engine.eclipse"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.mtcflow.model"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.mtcflow.model.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.mtcflow.model.editor"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.mtcflow.project"
+         id="com.mtcflow.engine.epsilon"
          download-size="0"
          install-size="0"
          version="0.0.0"

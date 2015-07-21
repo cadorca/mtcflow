@@ -14,7 +14,7 @@ import java.io.Serializable;
 
 public class ExecutionData implements Serializable {
 
-	public final static String EXECUTION_INFORMATIN_VALUE = "EXECUTION_INFORMATIN_VALUE";
+	public final static String EXECUTION_INFORMATION_VALUE = "EXECUTION_INFORMATIN_VALUE";
 	public final static String GENERATED_IN_WORKSPACE = "GENERATED_IN_WORKSPACE";
 
 	public boolean storeInWorkspace = false;
